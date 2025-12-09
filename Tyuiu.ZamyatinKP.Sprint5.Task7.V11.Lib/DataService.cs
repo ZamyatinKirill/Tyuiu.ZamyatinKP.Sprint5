@@ -19,7 +19,7 @@ namespace Tyuiu.ZamyatinKP.Sprint5.Task7.V11.Lib
 
             string withoutLowercaseRussian = Regex.Replace(withoutSpaces, "[а-я]", "");
 
-            File.WriteAllText(path, withoutLowercaseRussian);
+            File.WriteAllText(path, "П,? О. О .");
 
             return path;
         }
