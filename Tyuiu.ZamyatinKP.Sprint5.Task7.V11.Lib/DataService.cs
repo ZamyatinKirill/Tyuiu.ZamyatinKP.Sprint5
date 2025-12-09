@@ -15,7 +15,7 @@ namespace Tyuiu.ZamyatinKP.Sprint5.Task7.V11.Lib
             {
                 File.Delete(path);
             }
-            string withoutSpaces = Regex.Replace(text, @"\s+", "");
+            string withoutSpaces = Regex.Replace(text, " ", "");
 
             string withoutLowercaseRussian = Regex.Replace(withoutSpaces, "[а-я]", "");
 
