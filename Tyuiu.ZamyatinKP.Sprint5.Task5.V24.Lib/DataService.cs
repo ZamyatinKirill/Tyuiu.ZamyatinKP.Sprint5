@@ -10,7 +10,7 @@ namespace Tyuiu.ZamyatinKP.Sprint5.Task5.V24.Lib
             string content = File.ReadAllText(path);
             string[] nums = content.Split(new[] {' '}, StringSplitOptions.RemoveEmptyEntries);
 
-            int sum = 0;
+            double sum = 0;
 
             foreach (string num in nums)
             {
@@ -18,12 +18,14 @@ namespace Tyuiu.ZamyatinKP.Sprint5.Task5.V24.Lib
                 if (decimal.TryParse(num, System.Globalization.NumberStyles.Any,
                     System.Globalization.CultureInfo.InvariantCulture, out decimal number))
                 {
-                    decimal rounded = Math.Round(number, 3);
                     
-                    int intNum = (int)rounded;
-                    if (intNum >= 10 && intNum <= 99)
+                    double Num = (double)number;
+                    if (Num % 1 == 0)
                     {
-                        sum += intNum;
+                        if (Num >= 10 && Num <= 99)
+                        {
+                            sum += Num;
+                        }
                     }
                     
                 }
